@@ -45,6 +45,13 @@ $routes->group('produk', function($routes){
     $routes->put('(:segment)','ProdukController::ubah/$1');
     $routes->delete('(:segment)','ProdukController::hapus/$1');
 });
+$routes->group('kategori', function($routes){
+    $routes->get('/','KategoriController::list');
+    $routes->post('/','KategoriController::create');
+    $routes->get('(:segment)','KategoriController::detail/$1');
+    $routes->put('(:segment)','KategoriController::ubah/$1');
+    $routes->delete('(:segment)','KategoriController::hapus/$1');
+});
 
 /*
  * --------------------------------------------------------------------
